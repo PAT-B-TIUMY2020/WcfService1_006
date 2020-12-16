@@ -46,7 +46,7 @@ namespace WcfService1
             con.Open();
             SqlCommand cmd = new SqlCommand("Select * from UserTab", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
+            DataTable dt = new DataTable("UserTab");
             da.Fill(dt);
             g.usertab = dt;
             return g;
